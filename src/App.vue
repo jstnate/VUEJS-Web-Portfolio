@@ -11,7 +11,7 @@
               Développeur de passion, je crée des sites web et application avec un oeil nouveau et professionnel afin de
               répondre au mieux à vos besoins
           </p>
-          <a class="personal-docs" href="/docs/Cv-Recherche-Alternance-Nathan-LEFETEY.pdf" download>
+          <a class="personal-docs" href="../public/docs/Cv-Recherche-Alternance-Nathan-LEFETEY.pdf" download>
               <i class="fa-solid fa-download"></i>
               Télécharger mon CV
           </a>
@@ -112,18 +112,24 @@
           <SkillBadge icon="fa-brands fa-docker" title="Docker"/>
       </div>
   </section>
+  <section id="my-projects" class="section my-projects">
+    <h2>Mes Projets</h2>
+    <ProjectSlider />
+  </section>
 </template>
 <script>
   import Nav from '@/layouts/NavLayout.vue'
   import moment from 'moment'
   import ServiceCard from "@/components/ServiceCardComponent.vue";
   import SkillBadge from "@/components/SkillBadgeComponent.vue";
+  import ProjectSlider from "@/layouts/SliderLayout.vue";
   export default {
       name: "App",
       components: {
           Nav,
           ServiceCard,
-          SkillBadge
+          SkillBadge,
+          ProjectSlider
       },
       mounted() {
           const yearsDiv = document.getElementById("years");
@@ -153,9 +159,6 @@
               daysDiv.textContent = daysDiv !== null ? days : "";
               hoursDiv.textContent = hoursDiv !== null ? hours : "";
               minutesDiv.textContent = minutesDiv !== null ? minutes : "";
-              // if (yearsDiv !== null) {
-              //     yearsDiv.textContent = years;
-              // }
           }
 
           function updateTimeDifference(givenTimestamp) {
@@ -331,6 +334,7 @@
 
   .section {
       width: 100%;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       align-items: center;

@@ -6,8 +6,8 @@
 
         <ul>
             <li><a href="#my-services">Mes Services</a></li>
-            <li><a href="">Mes Compétences</a></li>
-            <li><a href="">Mes Projets</a></li>
+            <li><a href="#my-skills">Mes Compétences</a></li>
+            <li><a href="#my-projects">Mes Projets</a></li>
         </ul>
     </nav>
 </template>
