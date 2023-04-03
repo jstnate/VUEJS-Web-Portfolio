@@ -99,6 +99,7 @@
             color: #C5AA86;
             width: 250px;
             font-size: 16px;
+            width: 50%;
 
             .wrap {
                 font-size: 16px;
@@ -106,7 +107,7 @@
         }
 
         ul {
-            width: 40%;
+            width: 50%;
             display: flex;
             justify-content: space-between;
             align-items: center;

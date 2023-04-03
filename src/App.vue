@@ -1,7 +1,7 @@
 <template>
   <Nav />
   <section class="banner">
-      <div class="personal-infos">
+      <div id="about" class="personal-infos">
           <h1>
               Je suis Nathan LEFETEY,
               <br>
@@ -98,6 +98,7 @@
           <SkillBadge icon="fa-brands fa-css3-alt" title="CSS"/>
           <SkillBadge icon="fa-brands fa-square-js" title="Javascript"/>
           <SkillBadge icon="fa-brands fa-php" title="PHP"/>
+        <SkillBadge icon="fa-solid fa-database" title="MySql"/>
           <SkillBadge icon="fa-brands fa-swift" title="Swift"/>
           <SkillBadge icon="fa-brands fa-python" title="Python"/>
           <SkillBadge icon="fa-brands fa-sass" title="Sass"/>
@@ -110,12 +111,16 @@
           <SkillBadge icon="fa-brands fa-github" title="Github"/>
           <SkillBadge icon="fa-brands fa-gitlab" title="GitLab"/>
           <SkillBadge icon="fa-brands fa-docker" title="Docker"/>
-      </div>
+          <SkillBadge icon="fa-brands fa-yarn" title="Yarn"/>
+          <SkillBadge icon="fa-brands fa-npm" title="NPM"/>
+          <SkillBadge icon="fa-brands fa-figma" title="Figma"/>
+        </div>
   </section>
   <section id="my-projects" class="section my-projects">
     <h2>Mes Projets</h2>
     <ProjectSlider />
   </section>
+  <FooterLayout />
 </template>
 <script>
   import Nav from '@/layouts/NavLayout.vue'
@@ -123,13 +128,15 @@
   import ServiceCard from "@/components/ServiceCardComponent.vue";
   import SkillBadge from "@/components/SkillBadgeComponent.vue";
   import ProjectSlider from "@/layouts/SliderLayout.vue";
+  import FooterLayout from "@/layouts/FooterLayout.vue";
   export default {
       name: "App",
       components: {
           Nav,
           ServiceCard,
           SkillBadge,
-          ProjectSlider
+          ProjectSlider,
+          FooterLayout
       },
       mounted() {
           const yearsDiv = document.getElementById("years");
