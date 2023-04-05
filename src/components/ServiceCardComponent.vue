@@ -48,7 +48,7 @@ export default {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        padding: 2rem 1rem;
+        padding: 3rem 1.5rem;
         font-family: 'Josefin sans', sans-serif;
         gap: 15px;
         background: none;

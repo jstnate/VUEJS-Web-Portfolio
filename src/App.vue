@@ -91,6 +91,10 @@
 
       </div>
   </section>
+  <section id="my-projects" class="section my-projects">
+    <h2>Mes Projets</h2>
+    <ProjectSlider />
+  </section>
   <section id="my-skills" class="section my-skills">
       <h2>Mes compétences</h2>
       <div class="section__content my-skills__content">
@@ -98,7 +102,7 @@
           <SkillBadge icon="fa-brands fa-css3-alt" title="CSS"/>
           <SkillBadge icon="fa-brands fa-square-js" title="Javascript"/>
           <SkillBadge icon="fa-brands fa-php" title="PHP"/>
-        <SkillBadge icon="fa-solid fa-database" title="MySql"/>
+          <SkillBadge icon="fa-solid fa-database" title="MySql"/>
           <SkillBadge icon="fa-brands fa-swift" title="Swift"/>
           <SkillBadge icon="fa-brands fa-python" title="Python"/>
           <SkillBadge icon="fa-brands fa-sass" title="Sass"/>
@@ -115,10 +119,6 @@
           <SkillBadge icon="fa-brands fa-npm" title="NPM"/>
           <SkillBadge icon="fa-brands fa-figma" title="Figma"/>
         </div>
-  </section>
-  <section id="my-projects" class="section my-projects">
-    <h2>Mes Projets</h2>
-    <ProjectSlider />
   </section>
   <FooterLayout />
 </template>
