@@ -1,5 +1,5 @@
 <template>
-    <div @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
+    <div id="service-card" @mouseenter="onMouseEnter" @mouseleave="onMouseLeave">
         <img :src="require(`@/assets/icons/services-icons/${currentFavicon}`)" alt="icon de service">
         <h3>{{ title }}</h3>
         <p>{{ description }}</p>

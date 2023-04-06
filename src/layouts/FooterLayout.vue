@@ -1,8 +1,10 @@
 <template>
     <section class="footer">
         <div class="footer__div footer__me">
-            <span>Nathan LEFETEY</span>
-            <span>Web Portfolio</span>
+            <div>
+                <span>Nathan LEFETEY</span>
+                <span>Web Portfolio</span>
+            </div>
             <img src="@/assets/icons/logos/square_white_nate-logo.png" alt="">
         </div>
         <div class="footer__div footer__infos">
@@ -46,11 +48,17 @@ export default {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 4rem;
+        padding: 6rem;
         font-size: 16px;
         height: 50vh;
         font-family: 'Josefin Sans', sans-serif;
         color: #fff;
+
+        @media screen and (max-width: 860px) {
+            height: auto;
+            flex-direction: column;
+            gap: 50px;
+        }
 
         &__div {
             display: flex;
@@ -60,15 +68,26 @@ export default {
             height: 100%;
             align-items: flex-start;
             justify-content: space-between;
-
         }
 
         &__me {
             width: calc(100% / 5);
 
-            span {
-                font-size: 24px;
-                font-weight: 900;
+            @media screen and (max-width: 860px) {
+                width: 80%;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                span {
+                    font-size: 24px;
+                    font-weight: 900;
+                }
             }
 
             img {
@@ -83,6 +102,12 @@ export default {
             justify-content: space-between;
             height: 100%;
 
+            @media screen and (max-width: 860px) {
+                width: 80%;
+                flex-direction: row;
+                align-items: center;
+            }
+
             div {
                 display: flex;
                 flex-direction: column;
@@ -96,10 +121,22 @@ export default {
 
         &__anchor {
             width: calc(2 * (100% / 5));
+
+            @media screen and (max-width: 860px) {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
             &__content {
                 display: flex;
                 align-items: flex-start;
                 width: 100%;
+
+                @media screen and (max-width: 860px) {
+                    justify-content: space-between;
+                }
 
                 div {
                     display: flex;
@@ -108,8 +145,13 @@ export default {
                     height: 100%;
                     width: 50%;
 
+                    @media screen and (max-width: 860px) {
+                        width: auto;
+                    }
+
                     h3 {
                         margin-bottom: 1rem;
+                        font-size: 24px;
                     }
 
                     a {

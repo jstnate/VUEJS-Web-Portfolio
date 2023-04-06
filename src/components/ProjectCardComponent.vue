@@ -12,10 +12,6 @@
 export default {
     name: 'ProjectCardComponent',
     props: {
-        classes: {
-            type: String,
-            required: true
-        },
         cover: {
             type: String,
             required: true

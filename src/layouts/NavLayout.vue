@@ -4,18 +4,41 @@
             <span class="txt-rotate wrap" data-period="1000" data-rotate='[ "@jstnate", "Web Portfolio", "Home Page", "Nathan LEFETEY"]'></span>
         </span>
 
-        <ul>
+        <ul class="menu">
             <li><a href="#my-services">Mes Services</a></li>
             <li><a href="#my-projects">Mes Projets</a></li>
             <li><a href="#my-skills">Mes Compétences</a></li>
         </ul>
+
+        <div class="hamburger hamburger--arrowalt js-hamburger">
+            <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+            </div>
+        </div>
     </nav>
 </template>
 <script>
     export default {
         name: "NavLayout",
         mounted() {
+            let hamburger = document.querySelector('.hamburger');
+            let menu = document.querySelector('.menu');
             let nav = document.querySelector('.nav-bar');
+
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('is-active');
+                menu.classList.toggle('is-active');
+            });
+
+            // Ajoutez un écouteur d'événements à l'objet global window
+            window.addEventListener('click', function(event) {
+            // Vérifiez si l'élément cliqué fait partie de la liste .menu ou pas
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                // L'utilisateur a cliqué en dehors de la liste .menu
+                menu.classList.remove('active');
+            }
+            });
+
             window.addEventListener('scroll', function() {
                 if (window.scrollY > 0) {
                     nav.classList.add('scrolled');
@@ -23,6 +46,7 @@
                     nav.classList.remove('scrolled');
                 }
             });
+
             //  TEXT HEADER ANIM SCRIPT (Library)
             let TxtRotate = function(el, toRotate, period) {
                 this.toRotate = toRotate;
@@ -119,13 +143,35 @@
             }
         }
 
-        ul {
+        .menu {
             width: 50%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             color: #7D575D;
             list-style: none;
+            transform: translate(0);
+
+            @media screen and (max-width: 860px) {
+                position: absolute;
+                display: flex;
+                top: 0;
+                right: 0;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 25px;
+                background: rgb(125, 87, 93);
+                width: 60vw;
+                height: 100vh;
+                transform: scaleX(0);
+                transform-origin: right center;
+                transition: transform .3s ease;
+            }
+
+            &.is-active {
+                transform: scaleX(1);
+            }
 
             a {
                 position: relative;
@@ -133,36 +179,117 @@
                 font-size: 16px;
                 text-decoration: none;
 
+                @media screen and (max-width: 860px) {
+                    color: #F9F9F9;
+                    font-size: 20px;
+                }
+
                 &:hover::after {
                     transform: scaleX(1);
                     transform-origin: bottom left;
                 }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    transform: scaleX(0);
+                    height: 2px;
+                    bottom: -5px;
+                    left: 0;
+                    background-color: #7D575D;
+                    transform-origin: bottom right;
+                    transition: transform 0.25s ease-out;
+
+                    @media screen and (max-width: 860px) {
+                        background-color: #F9F9F9;
+                    }
+                }
             }
 
-            a::after {
-                content: '';
-                position: absolute;
-                width: 100%;
-                transform: scaleX(0);
-                height: 2px;
-                bottom: -5px;
-                left: 0;
-                background-color: #7D575D;
-                transform-origin: bottom right;
-                transition: transform 0.25s ease-out;
-            }
         }
 
-        .contact-button {
-            background-color: #C5AA86;
-            color: #FFFFFF;
-            padding: .8em 2em;
-            border-radius: 10px;
-            transition: all .3s;
-            font-size: 16px;
+        .hamburger {
+            font: inherit;
+            display: none;
+            overflow: visible;
+            margin: 0;
+            padding: 15px;
+            cursor: pointer;
+            transition-timing-function: linear;
+            transition-duration: .15s;
+            transition-property: opacity,filter;
+            text-transform: none;
+            color: inherit;
+            border: 0;
+            background-color: transparent;
 
-            &:hover {
-                background-color: #7D575D;
+            @media screen and (max-width: 860px) {
+                display: block;
+            }
+
+            &.is-active {
+                .hamburger-box {
+                    .hamburger-inner {
+
+                        &, &::before, &::after {
+                            background-color: #F9F9F9;
+                        }
+
+                        &::before {
+                            top: 0;
+                            transition: top .1s ease,transform .1s cubic-bezier(.895,.03,.685,.22) .1s;
+                            transform: translate3d(-8px,-10px,0) rotate(-45deg) scaleX(.7);
+                        }
+
+                        &::after {
+                            bottom: 0;
+                            transition: bottom .1s ease,transform .1s cubic-bezier(.895,.03,.685,.22) .1s;
+                            transform: translate3d(-8px,10px,0) rotate(45deg) scaleX(.7);
+                        }
+                    }
+                }
+            }
+
+            .hamburger-box {
+                position: relative;
+                display: inline-block;
+                width: 40px;
+                height: 24px;
+
+                .hamburger-inner {
+                    transform: rotate(180deg);
+                    top: 50%;
+                    display: block;
+                    margin-top: -2px;
+
+                    &, &::before, &::after {
+                        position: absolute;
+                        width: 40px;
+                        height: 4px;
+                        transition-timing-function: ease;
+                        transition-duration: .15s;
+                        transition-property: transform;
+                        border-radius: 4px;
+                        background-color: #C5AA86;
+                        
+                    }
+
+                    &::before, &::after {
+                        display: block;
+                        content: "";
+                    }
+
+                    &::before {
+                        top: -10px;
+                        transition: top .1s ease .1s,transform .1s cubic-bezier(.165,.84,.44,1);
+                    }
+
+                    &::after {
+                        transition: bottom .1s ease .1s,transform .1s cubic-bezier(.165,.84,.44,1);
+                        bottom: -10px;
+                    }
+                }
             }
         }
     }

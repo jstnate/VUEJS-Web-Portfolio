@@ -28,20 +28,20 @@
   </section>
   <div class="date-counter">
       <span class="text main-text">Depuis</span>
-      <span id="years" class="number"></span>
-      <span class="text">ans</span>
-      <span class="divider">|</span>
-      <span id="months" class="number"></span>
-      <span class="text">mois</span>
-      <span class="divider">|</span>
-      <span id="days" class="number"></span>
-      <span class="text">jours</span>
-      <span class="divider">|</span>
-      <span id="hours" class="number"></span>
-      <span class="text">heures</span>
-      <span class="divider">|</span>
-      <span id="minutes" class="number"></span>
-      <span class="text">minutes</span>
+      <span id="years" class="number years"></span>
+      <span class="text years">ans</span>
+      <span class="divider months">|</span>
+      <span id="months" class="number months"></span>
+      <span class="text months">mois</span>
+      <span class="divider days">|</span>
+      <span id="days" class="number days"></span>
+      <span class="text days">jours</span>
+      <span class="divider hours">|</span>
+      <span id="hours" class="number hours"></span>
+      <span class="text hours">heures</span>
+      <span class="divider minutes">|</span>
+      <span id="minutes" class="number minutes"></span>
+      <span class="text minutes">minutes</span>
   </div>
   <section id="my-services" class="section my-services">
       <h2 class="section__title my-services__title">Mes Services</h2>
@@ -187,7 +187,7 @@
   .banner {
       width: 100%;
       background-image: url("@/assets/images/cover/header-background-desktop.png");
-      height: 90vh;
+      min-height: 90vh;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -199,9 +199,23 @@
       font-family: 'Unbounded', cursive;
       font-size: 16px;
 
+      @media screen and (max-width: 860px){
+        background-image: url("@/assets/images/cover/header-background-mobile.png");
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding: 1rem 3rem 6rem;
+      }
+
       div {
           height: 100%;
           background: none;
+
+          @media screen and (max-width: 860px){
+            width: 80%;
+            height: auto;           
+          }
 
           &.personal-infos {
               width: 50%;
@@ -209,6 +223,12 @@
               flex-direction: column;
               justify-content: center;
               align-items: flex-start;
+
+              @media screen and (max-width: 860px){
+                width: 80%;
+                align-items: center;
+                text-align: center;
+              }
 
               h1 {
                   font-size: 28px;
@@ -257,11 +277,20 @@
                   align-items: center;
                   gap: 20px;
 
+                  @media screen and (max-width: 860px) {
+                    justify-content: center;
+                    margin-top: 50px;
+                  }
+
                   span {
                       font-size: 16px;
                       font-weight: 600;
                       color: #7D575D;
                       background: none;
+
+                      @media screen and (max-width: 860px) {
+                        display: none;
+                      }
                   }
 
                   a {
@@ -274,6 +303,10 @@
                       align-items: center;
                       transition: all .2s;
                       text-decoration: none;
+
+                      @media screen and (max-width: 860px) {
+                        padding: .8em;
+                      }
 
                       &:hover {
                           background-color: #C5AA86;
@@ -294,9 +327,18 @@
               justify-content: center;
               align-items: flex-end;
 
+              @media screen and (max-width: 860px) {
+                width: 80%;
+              }
+
               img {
                   width: 100%;
                   background: none;
+
+                  @media screen and (max-width: 860px){
+                    width: 70%;
+                    border-radius: 50%;
+                  }
               }
           }
       }
@@ -312,6 +354,13 @@
       height: 15vh;
       font-family: 'Josefin sans', sans-serif;
 
+      @media screen and (max-width: 860px) {
+
+        .minutes {
+            display: none;
+        }
+    }
+
       span {
           color: #FFFFFF;
           background: none;
@@ -323,6 +372,10 @@
 
               &.main-text {
                   margin-right: 100px;
+
+                  @media screen and (max-width: 860px) {
+                      margin-right: 50px;
+                  }
               }
           }
 
@@ -367,6 +420,10 @@
           color: #7D575D;
           position: relative;
 
+          @media screen and (max-width: 860px) {
+              width: 80%;
+          }
+
           &::before, &::after {
               content: "";
               position: absolute;
@@ -408,6 +465,8 @@
   }
 
   .my-services {
+    width: 80%;
+    margin: auto;
     padding: 150px 0 0;
     &__content {
           width: 80%;
@@ -425,6 +484,20 @@
           }
           .left {
               border-left: 1px solid #7D575D;
+          }
+
+          @media screen and (max-width: 860px) {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+
+            & > #service-card:nth-last-child(n+2) {
+                border-bottom: 2px solid #7D575D;
+            }
+            
+            .top, .right, .bottom, .left {
+                border: none;
+            }
           }
       }
   }
@@ -445,9 +518,14 @@
           background: none;
           display: grid;
           width: 80%;
+          margin-left: 10vw;
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
           place-items: center;
           gap: 20px;
+
+          @media screen and (max-width: 860px) {
+              place-items: start;
+          }
       }
   }
 </style>
