@@ -187,11 +187,11 @@
   .banner {
       width: 100%;
       background-image: url("@/assets/images/cover/header-background-desktop.png");
-      height: 80vh;
+      height: 90vh;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      margin: 10vh auto 0;
+      margin: 0 auto;
       display: flex;
       align-items: flex-end;
       justify-content: space-between;

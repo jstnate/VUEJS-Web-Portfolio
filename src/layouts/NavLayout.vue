@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav class="nav-bar">
         <span>
             <span class="txt-rotate wrap" data-period="1000" data-rotate='[ "@jstnate", "Web Portfolio", "Home Page", "Nathan LEFETEY"]'></span>
         </span>
@@ -15,8 +15,16 @@
     export default {
         name: "NavLayout",
         mounted() {
+            let nav = document.querySelector('.nav-bar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 0) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
             //  TEXT HEADER ANIM SCRIPT (Library)
-            var TxtRotate = function(el, toRotate, period) {
+            let TxtRotate = function(el, toRotate, period) {
                 this.toRotate = toRotate;
                 this.el = el;
                 this.loopNum = 0;
@@ -78,7 +86,7 @@
     }
 </script>
 <style lang="scss" scoped>
-    nav {
+    .nav-bar {
         position: fixed;
         top: 0;
         left: 0;
@@ -91,9 +99,14 @@
         font-size: 20px;
         font-weight: bold;
         font-family: 'Unbounded', cursive !important;
-        background-color: #F9F9F9;
-        box-shadow: 0 8px 16px -8px rgba(0, 0, 0, .2);
+        background-color: transparent;
+        transition: all .3s;
         z-index: 99;
+
+        &.scrolled {
+            background-color: #F9F9F9;
+            box-shadow: 0 8px 16px -8px rgba(0, 0, 0, .2);
+        }
 
         span {
             color: #C5AA86;
