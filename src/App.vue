@@ -408,8 +408,8 @@
   }
 
   .my-services {
-
-      &__content {
+    padding: 150px 0 0;
+    &__content {
           width: 80%;
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
