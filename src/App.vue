@@ -199,7 +199,7 @@
       font-family: 'Unbounded', cursive;
       font-size: 16px;
 
-      @media screen and (max-width: 860px){
+      @media screen and (max-width: 1024px){
         background-image: url("@/assets/images/cover/header-background-mobile.png");
         flex-direction: column-reverse;
         align-items: center;
@@ -212,7 +212,7 @@
           height: 100%;
           background: none;
 
-          @media screen and (max-width: 860px){
+          @media screen and (max-width: 1024px){
             width: 80%;
             height: auto;           
           }
@@ -224,7 +224,7 @@
               justify-content: center;
               align-items: flex-start;
 
-              @media screen and (max-width: 860px){
+              @media screen and (max-width: 1024px){
                 width: 80%;
                 align-items: center;
                 text-align: center;
@@ -277,7 +277,7 @@
                   align-items: center;
                   gap: 20px;
 
-                  @media screen and (max-width: 860px) {
+                  @media screen and (max-width: 1024px) {
                     justify-content: center;
                     margin-top: 50px;
                   }
@@ -288,7 +288,7 @@
                       color: #7D575D;
                       background: none;
 
-                      @media screen and (max-width: 860px) {
+                      @media screen and (max-width: 1024px) {
                         display: none;
                       }
                   }
@@ -304,7 +304,7 @@
                       transition: all .2s;
                       text-decoration: none;
 
-                      @media screen and (max-width: 860px) {
+                      @media screen and (max-width: 1024px) {
                         padding: .8em;
                       }
 
@@ -327,7 +327,7 @@
               justify-content: center;
               align-items: flex-end;
 
-              @media screen and (max-width: 860px) {
+              @media screen and (max-width: 1024px) {
                 width: 80%;
               }
 
@@ -335,9 +335,13 @@
                   width: 100%;
                   background: none;
 
-                  @media screen and (max-width: 860px){
-                    width: 70%;
+                  @media screen and (max-width: 1024px){
+                    width: 50%;
                     border-radius: 50%;
+                  }
+
+                  @media screen and (max-width: 768px){
+                    width: 70%;
                   }
               }
           }
@@ -354,12 +358,17 @@
       height: 15vh;
       font-family: 'Josefin sans', sans-serif;
 
-      @media screen and (max-width: 860px) {
-
+      @media screen and (max-width: 1024px) {
         .minutes {
             display: none;
         }
-    }
+      }
+
+      @media screen and (max-width: 860px) {
+        .hours {
+            display: none;
+        }
+      }
 
       span {
           color: #FFFFFF;
@@ -373,7 +382,7 @@
               &.main-text {
                   margin-right: 100px;
 
-                  @media screen and (max-width: 860px) {
+                  @media screen and (max-width: 1024px) {
                       margin-right: 50px;
                   }
               }
@@ -420,7 +429,7 @@
           color: #7D575D;
           position: relative;
 
-          @media screen and (max-width: 860px) {
+          @media screen and (max-width: 1024px) {
               width: 80%;
           }
 
@@ -469,9 +478,13 @@
     margin: auto;
     padding: 150px 0 0;
     &__content {
-          width: 80%;
+          width: 100%;
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+          @media screen and (max-width: 1024px) {
+            width: 80%;
+          }
 
           .top {
               border-top: 1px solid #7D575D;
@@ -486,7 +499,7 @@
               border-left: 1px solid #7D575D;
           }
 
-          @media screen and (max-width: 860px) {
+          @media screen and (max-width: 1024px) {
              display: flex;
              flex-direction: column;
              align-items: center;
@@ -518,13 +531,13 @@
           background: none;
           display: grid;
           width: 80%;
-          margin-left: 10vw;
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
           place-items: center;
           gap: 20px;
 
           @media screen and (max-width: 860px) {
               place-items: start;
+              margin-left: 10vw;
           }
       }
   }

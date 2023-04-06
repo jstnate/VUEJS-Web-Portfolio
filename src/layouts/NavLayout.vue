@@ -152,7 +152,7 @@
             list-style: none;
             transform: translate(0);
 
-            @media screen and (max-width: 860px) {
+            @media screen and (max-width: 1024px) {
                 position: absolute;
                 display: flex;
                 top: 0;
@@ -179,7 +179,7 @@
                 font-size: 16px;
                 text-decoration: none;
 
-                @media screen and (max-width: 860px) {
+                @media screen and (max-width: 1024px) {
                     color: #F9F9F9;
                     font-size: 20px;
                 }
@@ -201,7 +201,7 @@
                     transform-origin: bottom right;
                     transition: transform 0.25s ease-out;
 
-                    @media screen and (max-width: 860px) {
+                    @media screen and (max-width: 1024px) {
                         background-color: #F9F9F9;
                     }
                 }
@@ -224,7 +224,7 @@
             border: 0;
             background-color: transparent;
 
-            @media screen and (max-width: 860px) {
+            @media screen and (max-width: 1024px) {
                 display: block;
             }
 
