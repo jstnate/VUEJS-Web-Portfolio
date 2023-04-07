@@ -54,7 +54,7 @@ export default {
         font-family: 'Josefin Sans', sans-serif;
         color: #fff;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1100px) {
             height: auto;
             flex-direction: column;
             gap: 50px;
@@ -73,7 +73,7 @@ export default {
         &__me {
             width: calc(100% / 5);
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 1100px) {
                 width: 80%;
                 flex-direction: row;
                 align-items: center;
@@ -102,7 +102,7 @@ export default {
             justify-content: space-between;
             height: 100%;
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 1100px) {
                 width: 80%;
                 flex-direction: row;
                 align-items: center;
@@ -122,7 +122,7 @@ export default {
         &__anchor {
             width: calc(2 * (100% / 5));
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 1100px) {
                 width: 80%;
                 display: flex;
                 flex-direction: column;
@@ -134,7 +134,7 @@ export default {
                 align-items: flex-start;
                 width: 100%;
 
-                @media screen and (max-width: 1024px) {
+                @media screen and (max-width: 1100px) {
                     justify-content: space-between;
                 }
 
@@ -145,7 +145,7 @@ export default {
                     height: 100%;
                     width: 50%;
 
-                    @media screen and (max-width: 1024px) {
+                    @media screen and (max-width: 1100px) {
                         width: auto;
                     }
 
