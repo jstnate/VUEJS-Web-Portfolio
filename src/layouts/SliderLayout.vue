@@ -22,24 +22,37 @@ export default {
         const sliderItems = document.querySelectorAll('.slider__item');
         const previousButton = document.querySelector('.slider__controls__previous');
         const nextButton = document.querySelector('.slider__controls__next');
+        let viewport = window.innerWidth
 
         let currentPosition = 0;
 
+        window.addEventListener('resize', () => {
+            viewport = window.innerWidth
+
+            sliderItems.forEach((item) => {
+                if (viewport < 768) {
+                    item.classList.remove('third-plan');
+                } else {
+                    updateSlider();
+                }
+            })
+        })
+
         function updateSlider() {
             sliderItems.forEach((item, index) => {
-            item.className = 'slider__item'; // Reset all classes and keep only 'slider__item'
+                item.className = 'slider__item'; // Reset all classes and keep only 'slider__item'
 
-            let offset = (index - currentPosition + sliderItems.length) % sliderItems.length;
-            
-            if (offset === 0) {
-                item.classList.add('first-plan');
-            } else if (offset === 1 || offset === sliderItems.length - 1) {
-                item.classList.add('second-plan');
-                item.classList.add(`slider__item-${offset === 1 ? 2 : 4}`);
-            } else if (offset === 2 || offset === sliderItems.length - 2) {
-                item.classList.add('third-plan');
-                item.classList.add(`slider__item-${offset === 2 ? 1 : 5}`);
-            }
+                let offset = (index - currentPosition + sliderItems.length) % sliderItems.length;
+                
+                if (offset === 0) {
+                    item.classList.add('first-plan');
+                } else if (offset === 1 || offset === sliderItems.length - 1) {
+                    item.classList.add('second-plan');
+                    item.classList.add(`slider__item-${offset === 1 ? 2 : 4}`);
+                } else if (offset === 2 || offset === sliderItems.length - 2) {
+                    item.classList.add('third-plan');
+                    item.classList.add(`slider__item-${offset === 2 ? 1 : 5}`);
+                }
             });
         }
 
