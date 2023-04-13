@@ -60,6 +60,10 @@ export default {
             gap: 50px;
         }
 
+        @media screen and (max-width: 650px) {
+            padding: 6rem 1rem;
+        }
+
         &__div {
             display: flex;
             flex-direction: column;

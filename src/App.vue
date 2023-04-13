@@ -29,19 +29,19 @@
   <div class="date-counter">
       <span class="text main-text">Depuis</span>
       <span id="years" class="number years"></span>
-      <span class="text years">ans</span>
+      <span id="years-text" class="text years"></span>
       <span class="divider months">|</span>
       <span id="months" class="number months"></span>
-      <span class="text months">mois</span>
+      <span id="months-text" class="text months"></span>
       <span class="divider days">|</span>
       <span id="days" class="number days"></span>
-      <span class="text days">jours</span>
+      <span id="days-text" class="text days"></span>
       <span class="divider hours">|</span>
       <span id="hours" class="number hours"></span>
-      <span class="text hours">heures</span>
+      <span id="hours-text" class="text hours"></span>
       <span class="divider minutes">|</span>
       <span id="minutes" class="number minutes"></span>
-      <span class="text minutes">minutes</span>
+      <span id="minutes-text" class="text minutes"></span>
   </div>
   <section id="my-services" class="section my-services">
       <h2 class="section__title my-services__title">Mes Services</h2>
@@ -129,6 +129,7 @@
   import SkillBadge from "@/components/SkillBadgeComponent.vue";
   import ProjectSlider from "@/layouts/SliderLayout.vue";
   import FooterLayout from "@/layouts/FooterLayout.vue";
+
   export default {
       name: "App",
       components: {
@@ -144,6 +145,12 @@
           const daysDiv = document.getElementById("days");
           const hoursDiv = document.getElementById("hours");
           const minutesDiv = document.getElementById("minutes");
+
+          const yearsText = document.getElementById("years-text");
+          const monthsText = document.getElementById("months-text");
+          const daysText = document.getElementById("days-text");
+            const hoursText = document.getElementById("hours-text");
+            const minutesText = document.getElementById("minutes-text");
 
           function getCurrentTime(givenTimestamp) {
               // créer un objet moment pour le timestamp donné
@@ -166,6 +173,12 @@
               daysDiv.textContent = daysDiv !== null ? days : "";
               hoursDiv.textContent = hoursDiv !== null ? hours : "";
               minutesDiv.textContent = minutesDiv !== null ? minutes : "";
+
+              yearsText.textContent = years === 1 ? "year" : "years";
+              monthsText.textContent = months === 1 ? "month" : "months";
+              daysText.textContent = days === 1 ? "day" : "days";
+              hoursText.textContent = hours === 1 ? "hour" : "hours";
+              minutesText.textContent = minutes === 1 ? "minute" : "minutes";
           }
 
           function updateTimeDifference(givenTimestamp) {
@@ -175,7 +188,6 @@
               }, 10000);
               // actualiser toutes les 60 secondes
           }
-
 
           // utiliser la fonction pour mettre à jour l'affichage pour un timestamp donné
           updateTimeDifference(1630497600);
@@ -210,6 +222,11 @@
         height: auto;
       }
 
+      @media screen and (max-width: 650px) {
+        padding: 0;
+
+      }
+
       div {
           height: 100%;
           background: none;
@@ -236,8 +253,13 @@
                   font-size: 28px;
                   font-weight: 700;
                   color: #C5AA86;
-                  margin-bottom: 2vh;
+                  margin-bottom: 20px;
                   background: none;
+                  
+                  @media screen and (max-width: 550px) {
+                    font-size: 24px;
+                    margin-bottom: 25px;
+                  }
               }
 
               p {
@@ -246,6 +268,7 @@
                   color: #7D575D;
                   margin-bottom: 5vh;
                   background: none;
+                  
               }
 
               .personal-docs {
@@ -333,6 +356,10 @@
                 width: 80%;
               }
 
+              @media screen and (max-width: 650px) {
+                display: none;
+              }
+
               img {
                   width: 100%;
                   background: none;
@@ -368,6 +395,12 @@
 
       @media screen and (max-width: 990px) {
         .hours {
+            display: none;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .days {
             display: none;
         }
       }
@@ -555,6 +588,10 @@
           @media screen and (max-width: 860px) {
               place-items: start;
               margin-left: 10vw;
+          }
+
+          @media screen and (max-width: 768px) {
+              width: 90%;
           }
       }
   }
