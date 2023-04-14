@@ -134,7 +134,7 @@ export default {
                     left: 30%;
 
                     @media screen and (max-width: 430px) {
-                        left: 35%;
+                        left: 40%;
                     }
                 }
 
@@ -142,7 +142,7 @@ export default {
                     left: 70%;
 
                     @media screen and (max-width: 430px) {
-                        left: 65%;
+                        left: 60%;
                     }
                 }
             }
