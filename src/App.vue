@@ -217,7 +217,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0 10vw;
-  font-family: "Unbounded", cursive;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
 
   @media screen and (max-width: 1200px) {
@@ -283,13 +283,11 @@ export default {
       }
 
       p {
-        font-size: 16px;
-        font-weight: 400;
+        font-size: 20px;
+        font-weight: 500;
         color: #7d575d;
         margin-bottom: 5vh;
         background: none;
-
-
       }
 
       .personal-docs {
