@@ -3,6 +3,7 @@
         <ProjectCard class="slider__item slider__item-3 first-plan" data-index="3" cover="carbon_mockup.png" title="Carbon" type="Site Web" url="#" />
         <ProjectCard class="slider__item slider__item-1 third-plan" data-index="1" cover="pantheon-project_mockup.png" title="Projet Panthéon" type="Site Web" url="#" />
         <ProjectCard class="slider__item slider__item-2 second-plan" data-index="2" cover="flouflix_mockup.png" title="Flouflix" type="Site Web" url="#" />
+        <ProjectCard class="slider__item slider__item-3" data-index="6" cover="carbon_mockup.png" title="Carbon" type="Site Web" url="#" />
         <ProjectCard class="slider__item slider__item-4 second-plan" data-index="4" cover="flouflix_mockup.png" title="Flouflix" type="Site Web" url="#" />
         <ProjectCard class="slider__item slider__item-5 third-plan" data-index="5" cover="pantheon-project_mockup.png" title="Projet Panthéon" type="Site Web" url="#" />
     </div>
@@ -61,7 +62,10 @@ export default {
                     item.classList.add(`slider__item-${offset === 2 ? 1 : 5}`);
                 }
 
-                responsiveAdapt();
+                if (viewport < 980) {
+                    item.classList.remove('third-plan');
+                }
+
             });
         }
 
