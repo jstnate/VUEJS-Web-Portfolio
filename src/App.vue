@@ -201,6 +201,14 @@ export default {
     // utiliser la fonction pour mettre à jour l'affichage pour un timestamp donné
     updateTimeDifference(1630497600);
     getCurrentTime(1630497600);
+
+    window.onfocus = () => {
+        document.title = 'Nathan LEFETEY - Portfolio'
+    }
+
+    window.onblur = () => {
+        document.title = 'Revenez vite !'
+    }
   },
 };
 </script>
@@ -515,6 +523,10 @@ export default {
       height: 110%;
       transform: scaleX(0) scaleY(0);
       transition: transform 0.5s;
+
+      @media screen and (max-width: 990px) {
+        transform: scaleX(1) scaleY(1);
+      }
     }
 
     &::before {
