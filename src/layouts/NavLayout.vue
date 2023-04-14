@@ -127,6 +127,10 @@
         transition: all .3s;
         z-index: 99;
 
+        @media screen and (max-width: 550px) {
+            padding: 0 1rem;
+        }
+
         &.scrolled {
             background-color: #F9F9F9;
             box-shadow: 0 8px 16px -8px rgba(0, 0, 0, .2);
@@ -167,6 +171,10 @@
                 transform: scaleX(0);
                 transform-origin: right center;
                 transition: transform .3s ease;
+            }
+
+            @media screen and (max-width: 550px) {
+                width: 80vw;
             }
 
             &.is-active {

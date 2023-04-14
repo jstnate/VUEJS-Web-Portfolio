@@ -83,6 +83,12 @@ export default {
                 align-items: center;
             }
 
+            @media screen and (max-width: 450px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 25px;
+            }
+
             div {
                 display: flex;
                 flex-direction: column;
@@ -110,6 +116,12 @@ export default {
                 width: 80%;
                 flex-direction: row;
                 align-items: center;
+            }
+
+            @media screen and (max-width: 450px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 25px;
             }
 
             div {

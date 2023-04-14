@@ -27,6 +27,10 @@ export default {
         gap: 15px;
         padding: 10px 30px;
 
+        @media screen and (max-width: 580px) {
+            flex-direction: column;
+        }
+
         &:hover {
             background: #F9F9F9;
             border-radius: 10px;

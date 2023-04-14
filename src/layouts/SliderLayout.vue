@@ -7,8 +7,8 @@
         <ProjectCard class="slider__item slider__item-5 third-plan" data-index="5" cover="pantheon-project_mockup.png" title="Projet Panthéon" type="Site Web" url="#" />
     </div>
     <div class="slider__controls">
-        <button class="slider__controls__previous"><i class="fa-solid fa-chevron-left"></i> Previous</button>
-        <button class="slider__controls__next">Next <i class="fa-solid fa-chevron-right"></i></button>
+        <button class="slider__controls__previous"><i class="fa-solid fa-chevron-left"></i> <span>Previous</span></button>
+        <button class="slider__controls__next"><span>Next</span> <i class="fa-solid fa-chevron-right"></i></button>
     </div>
 </template>
 <script>
@@ -56,12 +56,12 @@ export default {
             });
         }
 
-        previousButton.addEventListener('click', () => {
+        nextButton.addEventListener('click', () => {
             currentPosition = (currentPosition - 1 + sliderItems.length) % sliderItems.length;
             updateSlider();
         });
 
-        nextButton.addEventListener('click', () => {
+        previousButton.addEventListener('click', () => {
             currentPosition = (currentPosition + 1) % sliderItems.length;
             updateSlider();
         });
@@ -95,15 +95,35 @@ export default {
                 width: 430px;
                 left: 50%;
                 transform: translateX(-50%);
+
+                @media screen and (max-width: 580px) {
+                    width: 430px;
+                    height: 300px;
+                }
+
+                @media screen and (max-width: 430px) {
+                    width: 330px;
+                    height: 250px;
+                }
             }
 
             &.second-plan {
                 z-index: 1;
                 opacity: .8;
                 height: 300px;
-                width: 380px;
+                width: 430px;
                 left: 50%;
                 transform: translateX(-50%);
+
+                @media screen and (max-width: 580px) {
+                    width: 330px;
+                    height: 250px;
+                }
+
+                @media screen and (max-width: 430px) {
+                    width: 280px;
+                    height: 200px;
+                }
 
                 &.slider__item-2 {
                     left: 30%;
@@ -120,6 +140,16 @@ export default {
                 width: 330px;
                 left: 50%;
                 transform: translateX(-50%);
+
+                @media screen and (max-width: 580px) {
+                    width: 280px;
+                    height: 200px;
+                }
+
+                @media screen and (max-width: 430px) {
+                    width: 230px;
+                    height: 150px;
+                }
 
                 &.slider__item-1 {
                     left: 15%;
@@ -153,6 +183,18 @@ export default {
                 border: none;
                 color: #F9F9F9;
                 z-index: 1;
+
+                @media screen and (max-width: 450px) {
+                    width: 100px;
+                }
+
+                span {
+                    margin-top: 3px;
+
+                    @media screen and (max-width: 450px) {
+                        display: none;
+                    }
+                }
 
                 &:hover {
                     background-color: #7D575D;

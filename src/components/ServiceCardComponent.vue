@@ -72,6 +72,10 @@ export default {
             text-transform: uppercase;
             font-size: 20px;
             font-weight: 600;
+
+            @media screen and (max-width: 580px) {
+                font-size: 16px;
+            }
         }
 
         p {
