@@ -60,6 +60,8 @@ export default {
                     item.classList.add('third-plan');
                     item.classList.add(`slider__item-${offset === 2 ? 1 : 5}`);
                 }
+
+                responsiveAdapt();
             });
         }
 
