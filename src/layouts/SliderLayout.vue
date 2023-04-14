@@ -132,10 +132,18 @@ export default {
 
                 &.slider__item-2 {
                     left: 30%;
+
+                    @media screen and (max-width: 430px) {
+                        left: 35%;
+                    }
                 }
 
                 &.slider__item-4 {
                     left: 70%;
+
+                    @media screen and (max-width: 430px) {
+                        left: 65%;
+                    }
                 }
             }
 
