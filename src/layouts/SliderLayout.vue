@@ -79,6 +79,11 @@ export default {
         width: 100%;
         position: relative;
 
+        @media screen and (max-width: 580px) {
+            height: 300px;
+            max-width: 95%;
+        }
+
         &__item {
             height: 200px;
             opacity: 0;

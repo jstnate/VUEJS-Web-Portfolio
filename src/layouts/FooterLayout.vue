@@ -130,6 +130,7 @@ export default {
                 align-items: flex-start;
 
                 span {
+                    color: #F9F9F9;
                     line-height: 1.5rem;
                 }
             }

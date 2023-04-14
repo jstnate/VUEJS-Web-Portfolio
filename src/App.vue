@@ -653,10 +653,4 @@ export default {
     }
   }
 }
-
-.my-projects {
-  @media screen and (max-width: 450px) {
-    gap: 60px;
-  }
-}
 </style>
