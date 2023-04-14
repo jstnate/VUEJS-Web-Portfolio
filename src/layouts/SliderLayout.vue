@@ -102,13 +102,13 @@ export default {
                 transform: translateX(-50%);
 
                 @media screen and (max-width: 580px) {
-                    width: 430px;
-                    height: 300px;
+                    width: 380px;
+                    height: 250px;
                 }
 
                 @media screen and (max-width: 430px) {
-                    width: 330px;
-                    height: 250px;
+                    width: 280px;
+                    height: 200px;
                 }
             }
 
@@ -121,29 +121,29 @@ export default {
                 transform: translateX(-50%);
 
                 @media screen and (max-width: 580px) {
-                    width: 330px;
-                    height: 250px;
+                    width: 280px;
+                    height: 200px;
                 }
 
                 @media screen and (max-width: 430px) {
-                    width: 280px;
-                    height: 200px;
+                    width: 230px;
+                    height: 150px;
                 }
 
                 &.slider__item-2 {
                     left: 30%;
 
-                    @media screen and (max-width: 430px) {
-                        left: 40%;
-                    }
+                    // @media screen and (max-width: 430px) {
+                    //     left: 40%;
+                    // }
                 }
 
                 &.slider__item-4 {
                     left: 70%;
 
-                    @media screen and (max-width: 430px) {
-                        left: 60%;
-                    }
+                    // @media screen and (max-width: 430px) {
+                    //     left: 60%;
+                    // }
                 }
             }
 
