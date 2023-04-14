@@ -135,7 +135,7 @@ export default {
                 }
 
                 &.slider__item-4 {
-                    left: 60%;
+                    left: 70%;
                 }
             }
 
