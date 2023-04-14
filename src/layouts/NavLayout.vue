@@ -140,6 +140,7 @@
             color: #C5AA86;
             width: 250px;
             font-size: 16px;
+            font-family: 'Josefin Sans', sans-serif;
             width: 50%;
 
             .wrap {
@@ -186,6 +187,7 @@
                 color: #7D575D;
                 font-size: 16px;
                 text-decoration: none;
+                font-family: 'Josefin Sans', sans-serif;
 
                 @media screen and (max-width: 1200px) {
                     color: #F9F9F9;
