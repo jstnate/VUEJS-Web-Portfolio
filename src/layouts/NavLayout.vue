@@ -92,12 +92,12 @@
             window.onload = function() {
                 var elements = document.getElementsByClassName('txt-rotate');
                 for (var i=0; i<elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-rotate');
-                var period = elements[i].getAttribute('data-period');
+                    var toRotate = elements[i].getAttribute('data-rotate');
+                    var period = elements[i].getAttribute('data-period');
 
-                if (toRotate) {
-                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
-                }
+                    if (toRotate) {
+                        new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                    }
                 }
 
                 // INJECT CSS
@@ -185,13 +185,12 @@
             a {
                 position: relative;
                 color: #7D575D;
-                font-size: 16px;
+                font-size: 20px;
                 text-decoration: none;
                 font-family: 'Josefin Sans', sans-serif;
 
                 @media screen and (max-width: 1200px) {
                     color: #F9F9F9;
-                    font-size: 20px;
                 }
 
                 &:hover::after {

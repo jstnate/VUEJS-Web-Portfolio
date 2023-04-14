@@ -26,7 +26,7 @@ export default {
 
         let currentPosition = 0;
 
-        window.onload = () => {
+        window.onscroll = () => {
             responsiveAdapt()
         }
 
@@ -61,7 +61,9 @@ export default {
                     item.classList.add(`slider__item-${offset === 2 ? 1 : 5}`);
                 }
 
-                responsiveAdapt();
+                if (viewport < 980) {
+                    item.classList.remove('third-plan');
+                }
             });
         }
 
