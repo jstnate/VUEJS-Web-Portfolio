@@ -59,7 +59,7 @@
       <ServiceCard
         class="right bottom"
         title="ux / ui design"
-        description="Réalisation de maquettes de sites web et d'applications pensés et conceptualisés pour vos utilisateur"
+        description="Réalisation de maquettes de sites web et d'applications pensés et conceptualisés pour vos utilisateurs"
         favicon="uxui-bdx.png"
         hoverFavicon="uxui-white.png"
       />

@@ -1,11 +1,11 @@
 <template>
     <div class="slider">
-        <ProjectCard class="slider__item slider__item-3 first-plan" data-index="3" cover="carbon_mockup.png" title="Carbon" type="Site Web" url="#" />
-        <ProjectCard class="slider__item slider__item-1 third-plan" data-index="1" cover="pantheon-project_mockup.png" title="Projet Panthéon" type="Site Web" url="#" />
-        <ProjectCard class="slider__item slider__item-2 second-plan" data-index="2" cover="flouflix_mockup.png" title="Flouflix" type="Site Web" url="#" />
-        <ProjectCard class="slider__item slider__item-3" data-index="6" cover="carbon_mockup.png" title="Carbon" type="Site Web" url="#" />
-        <ProjectCard class="slider__item slider__item-4 second-plan" data-index="4" cover="flouflix_mockup.png" title="Flouflix" type="Site Web" url="#" />
-        <ProjectCard class="slider__item slider__item-5 third-plan" data-index="5" cover="pantheon-project_mockup.png" title="Projet Panthéon" type="Site Web" url="#" />
+        <ProjectCard class="slider__item slider__item-3 first-plan" data-index="3" cover="carbon_mockup.png" title="Carbon" type="Site Web" url="https://carbon-le-jeu.000webhostapp.com/" />
+        <ProjectCard class="slider__item slider__item-1 third-plan" data-index="1" cover="pantheon-project_mockup.png" title="Projet Panthéon" type="Site Web" url="https://jstnate.github.io/pantheon-project/" />
+        <ProjectCard class="slider__item slider__item-2 second-plan" data-index="2" cover="flouflix_mockup.png" title="Flouflix" type="Site Web" url="https://flouflix-devlab.000webhostapp.com/login.php" />
+        <ProjectCard class="slider__item slider__item-3" data-index="6" cover="carbon_mockup.png" title="Carbon" type="Site Web" url="https://carbon-le-jeu.000webhostapp.com/" />
+        <ProjectCard class="slider__item slider__item-4 second-plan" data-index="4" cover="flouflix_mockup.png" title="Flouflix" type="Site Web" url="https://flouflix-devlab.000webhostapp.com/login.php" />
+        <ProjectCard class="slider__item slider__item-5 third-plan" data-index="5" cover="pantheon-project_mockup.png" title="Projet Panthéon" type="Site Web" url="https://jstnate.github.io/pantheon-project/" />
     </div>
     <div class="slider__controls">
         <button class="slider__controls__previous"><i class="fa-solid fa-chevron-left"></i> <span>Previous</span></button>
