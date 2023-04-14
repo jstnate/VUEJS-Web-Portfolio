@@ -26,17 +26,24 @@ export default {
 
         let currentPosition = 0;
 
+        window.onload = () => {
+            responsiveAdapt()
+        }
+
         window.addEventListener('resize', () => {
             viewport = window.innerWidth
-
-            sliderItems.forEach((item) => {
-                if (viewport < 768) {
-                    item.classList.remove('third-plan');
-                } else {
-                    updateSlider();
-                }
-            })
+            responsiveAdapt()
         })
+
+        function responsiveAdapt() {
+            sliderItems.forEach((item) => {
+            if (viewport < 980) {
+                item.classList.remove('third-plan');
+            } else {
+                updateSlider();
+            }
+        })
+        }
 
         function updateSlider() {
             sliderItems.forEach((item, index) => {
