@@ -5,7 +5,9 @@
       <h1>
         Je suis Nathan LEFETEY,
         <br />
-        Développeur Fullstack
+        <span>
+            <span class="txt-rotate wrap" data-period="1000" data-rotate='[ "Développeur Full-Stack", "UX / UI Designer", "Web Designer", "Intégrateur Web", "Développeur Mobile", "JS Lover <3"]'></span>
+        </span>
       </h1>
       <p>
         Développeur de passion, je crée des sites web et application avec un
@@ -240,13 +242,9 @@ export default {
   }
 
   @media screen and (max-width: 650px) {
-    padding: 0;
+    padding: 6rem 0 4rem;
   }
   
-  @media screen and (max-width: 430px) {
-    min-height: 80vh;
-    }
-
   div {
     height: 100%;
     background: none;
@@ -568,6 +566,10 @@ export default {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    @media screen and (min-width: 1600px) {
+      width: 80%;
+    }
 
     @media screen and (max-width: 1200px) {
       width: 80%;
