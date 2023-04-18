@@ -1,7 +1,7 @@
 <template>
   <Nav />
-  <section class="banner">
-    <div id="about" class="personal-infos">
+  <section class="banner" data-aos="">
+    <div id="about" class="personal-infos" data-aos="fade-right">
       <h1>
         Je suis Nathan LEFETEY,
         <br />
@@ -34,7 +34,8 @@
         ></a>
       </div>
     </div>
-    <div class="personal-picture">
+
+    <div class="personal-picture" data-aos="fade-left">
       <img src="@/assets/images/cover/nathan_lefetey_pic.png" alt="" />
     </div>
   </section>
@@ -55,9 +56,9 @@
     <span id="minutes" class="number minutes"></span>
     <span id="minutes-text" class="text minutes"></span>
   </div>
-  <section id="my-services" class="section my-services">
-    <h2 class="section__title my-services__title">Mes Services</h2>
-    <div class="section__content my-services__content">
+  <section id="my-services" class="section my-services" data-aos="">
+    <h2 class="section__title my-services__title" data-aos="fade-down">Mes Services</h2>
+    <div class="section__content my-services__content" data-aos="zoom-out">
       <ServiceCard
         class="right bottom"
         title="ux / ui design"
@@ -103,35 +104,35 @@
     </div>
   </section>
   <section id="my-projects" class="section my-projects">
-    <h2>Mes Projets</h2>
-    <ProjectSlider />
+    <h2 data-aos="fade-down">Mes Projets</h2>
+    <ProjectSlider/>
   </section>
   <section id="my-skills" class="section my-skills">
-    <h2>Mes compétences</h2>
+    <h2 data-aos="fade-down">Mes compétences</h2>
     <div class="section__content my-skills__content">
-      <SkillBadge icon="fa-brands fa-html5" title="HTML" />
-      <SkillBadge icon="fa-brands fa-css3-alt" title="CSS" />
-      <SkillBadge icon="fa-brands fa-square-js" title="Javascript" />
-      <SkillBadge icon="fa-brands fa-php" title="PHP" />
-      <SkillBadge icon="fa-solid fa-database" title="MySql" />
-      <SkillBadge icon="fa-brands fa-swift" title="Swift" />
-      <SkillBadge icon="fa-brands fa-python" title="Python" />
-      <SkillBadge icon="fa-brands fa-sass" title="Sass" />
-      <SkillBadge icon="fa-brands fa-vuejs" title="VueJs" />
-      <SkillBadge icon="fa-brands fa-node-js" title="NodeJS" />
-      <SkillBadge icon="fa-brands fa-react" title="React" />
-      <SkillBadge icon="fa-brands fa-laravel" title="Laravel" />
-      <SkillBadge icon="fa-brands fa-symfony" title="Symfony" />
-      <SkillBadge icon="fa-brands fa-wordpress" title="Wordpress" />
-      <SkillBadge icon="fa-brands fa-github" title="Github" />
-      <SkillBadge icon="fa-brands fa-gitlab" title="GitLab" />
-      <SkillBadge icon="fa-brands fa-docker" title="Docker" />
-      <SkillBadge icon="fa-brands fa-yarn" title="Yarn" />
-      <SkillBadge icon="fa-brands fa-npm" title="NPM" />
-      <SkillBadge icon="fa-brands fa-figma" title="Figma" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-html5" title="HTML" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-css3-alt" title="CSS" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-square-js" title="Javascript" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-php" title="PHP" />
+      <SkillBadge data-aos="flip-left" icon="fa-solid fa-database" title="MySql" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-swift" title="Swift" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-python" title="Python" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-sass" title="Sass" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-vuejs" title="VueJs" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-node-js" title="NodeJS" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-react" title="React" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-laravel" title="Laravel" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-symfony" title="Symfony" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-wordpress" title="Wordpress" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-github" title="Github" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-gitlab" title="GitLab" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-docker" title="Docker" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-yarn" title="Yarn" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-npm" title="NPM" />
+      <SkillBadge data-aos="flip-left" icon="fa-brands fa-figma" title="Figma" />
     </div>
   </section>
-  <FooterLayout />
+  <FooterLayout data-aos="fade-up"/>
 </template>
 <script>
 import Nav from "@/layouts/NavLayout.vue";
