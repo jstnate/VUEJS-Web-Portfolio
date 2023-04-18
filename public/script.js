@@ -1,3 +1,7 @@
+AOS.init({
+    duration: 1000,
+});
+
 //  TEXT HEADER ANIM SCRIPT (Library)
 let TxtRotate = function(el, toRotate, period) {
     this.toRotate = toRotate;
