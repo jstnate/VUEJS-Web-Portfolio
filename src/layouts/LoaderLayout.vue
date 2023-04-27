@@ -7,12 +7,10 @@
 export default {
     name: "LoaderLayout",
     mounted() {
-        window.onload = () => {
             setTimeout(() => {
-                document.getElementById("preloader").style.display = "none";
-            }, 3500);
+                document.getElementById("preloader").classList.add("hidden");
+            }, 4000);
         }
-    }
 }
 </script>
 <style lang="scss" scoped>
@@ -28,6 +26,10 @@ export default {
         align-items: center;
         justify-content: center;
         animation: loaderHidding 4s;
+
+        &.hidden {
+            display: none;
+        }
 
         img {
             width: 150px;
@@ -49,14 +51,17 @@ export default {
 
         @keyframes loaderHidding {
             0% {
+                display: flex;
                 opacity: 1;
             }
 
             50% {
+                display: flex;
                 opacity: 1;
             }
 
             100% {
+                display: none;
                 opacity: 0;
             }
         }
