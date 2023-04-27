@@ -8,10 +8,6 @@ export default {
     name: "LoaderLayout",
     mounted() {
         window.onload = () => {
-            document.getElementById("preloader").style.animationPlayState = "paused";
-            setTimeout(() => {
-                document.getElementById("preloader").style.animationPlayState = "running";
-            }, 2000);
             setTimeout(() => {
                 document.getElementById("preloader").style.display = "none";
             }, 3500);
@@ -31,7 +27,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
-        animation: loaderHidding 2s;
+        animation: loaderHidding 4s;
 
         img {
             width: 150px;
