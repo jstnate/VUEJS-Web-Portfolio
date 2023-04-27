@@ -1,4 +1,5 @@
 <template>
+  <Loader />
   <Nav />
   <section class="banner" data-aos="">
     <div id="about" class="personal-infos" data-aos="fade-right">
@@ -135,6 +136,7 @@
   <FooterLayout data-aos="fade-up"/>
 </template>
 <script>
+import Loader from "@/layouts/LoaderLayout.vue"
 import Nav from "@/layouts/NavLayout.vue";
 import moment from "moment";
 import ServiceCard from "@/components/ServiceCardComponent.vue";
@@ -145,6 +147,7 @@ import FooterLayout from "@/layouts/FooterLayout.vue";
 export default {
   name: "App",
   components: {
+    Loader,
     Nav,
     ServiceCard,
     SkillBadge,
